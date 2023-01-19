@@ -1,10 +1,11 @@
+import { COLORS } from '@config';
 import {StyleSheet} from 'react-native-size-scaling';
 
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    padding: 16,
+    padding: 8,
+    backgroundColor: COLORS.BACKGROUND
   },
   wrapBox: {
     backgroundColor: '#F8F8FF',
@@ -51,6 +52,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
     marginTop: 32,
     height: 50,
+    alignItems:'center',justifyContent:'center',
     shadowColor: '#000',
     shadowOffset: {
       width: 0,

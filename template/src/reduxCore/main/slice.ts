@@ -1,44 +1,27 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
 export interface IRootState {
-  locale: string;
-  loading: boolean;
   data: any[];
 }
 
 const initialState: IRootState = {
-  locale: 'en',
-  loading: false,
   data: [],
 };
 
 export const mainSlice = createSlice({
   name: 'main',
   initialState,
-  reducers: {
-    changeLanguageAction: (
-      state: IRootState,
-      action: PayloadAction<'vi' | 'en'>,
-    ) => {
-      state.locale = action.payload;
-    },
-    todoRequestAction: (state: IRootState) => {
-      state.loading = true;
-    },
-    todoSuccessRequestAction: (
+  reducers: { 
+    pushData: (
       state: IRootState,
       action: PayloadAction<any[]>,
     ) => {
-      state.loading = false;
       state.data = action.payload;
     },
   },
 });
 
-export const {
-  changeLanguageAction,
-  todoRequestAction,
-  todoSuccessRequestAction,
+export const {pushData
 } = mainSlice.actions;
-export const selectMain = (state: {main: any}) => state.main;
+export const selectData = (state: {main: any}) => state.main.data;
 export default mainSlice.reducer;

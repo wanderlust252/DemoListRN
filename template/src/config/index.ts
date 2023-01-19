@@ -18,7 +18,7 @@ const COLORS: COLOR = {
   BUTTON: 'black',
   BUTTON_TEXT: 'gray',
   TEXT: 'black',
-  BACKGROUND: '#E8E8E8',
+  BACKGROUND: '#E1F5DD',
   HEADER_BG: 'black',
 };
 
